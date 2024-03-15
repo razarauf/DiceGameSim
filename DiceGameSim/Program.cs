@@ -1,10 +1,12 @@
-﻿namespace DiceGameSim;
+﻿using System.Diagnostics;
+
+namespace DiceGameSim;
 
 class Program
 {
     static void Main(string[] args)
     {
-        int noOfSimulations = 5;
+        int noOfSimulations = 10000;
         int noOfDie = 5;
         int total = 0;
 
@@ -13,7 +15,9 @@ class Program
 
         List<int> die = new List<int>(noOfDie);
         Dictionary<int, int> result = new Dictionary<int, int>();
-        
+
+        Stopwatch stopWatch = Stopwatch.StartNew();
+
         for (int i = 0; i < noOfSimulations; i++)
         {
             InitDie(die);
@@ -27,7 +31,9 @@ class Program
             LogResult(result, total);
         }
 
-        PrintLog(result, noOfSimulations, noOfDie);
+        stopWatch.Stop();
+
+        PrintLog(result, noOfSimulations, noOfDie, stopWatch.ElapsedMilliseconds);
 
         Console.ReadLine();    
     }
@@ -80,7 +86,7 @@ class Program
         }
     }
 
-    public static void PrintLog(Dictionary<int, int> result, int noOfSims, int noOfDie)
+    public static void PrintLog(Dictionary<int, int> result, int noOfSims, int noOfDie, float timeElapsed)
     {
         Console.WriteLine($"Number of simulations was {noOfSims} using {noOfDie} dice.");
 
@@ -89,7 +95,7 @@ class Program
             Console.WriteLine($"Total {element.Key} occurs {element.Value} times");
         }
 
-        Console.WriteLine($"Total simulation took {0.1} seconds.");
+        Console.WriteLine($"Total simulation took {timeElapsed} milliseconds.");
     }
 
     public static void PrintDie(List<int> die)
