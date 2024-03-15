@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceGameSim", "DiceGameSim\DiceGameSim.csproj", "{DB38D4B3-262F-40E5-8DFF-147C50B2ABEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB38D4B3-262F-40E5-8DFF-147C50B2ABEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB38D4B3-262F-40E5-8DFF-147C50B2ABEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB38D4B3-262F-40E5-8DFF-147C50B2ABEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB38D4B3-262F-40E5-8DFF-147C50B2ABEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E65E26F6-17C7-4873-9A50-0EC45623BD27}
+	EndGlobalSection
+EndGlobal
